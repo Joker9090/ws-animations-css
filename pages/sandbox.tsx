@@ -10,8 +10,30 @@ export default function SandBox() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='SandBox'>
-        <p>HOLA MUNDO</p>
+        <section className='Hero'>
+          <div className="d-flex justify-content-between">
+            <div className='Left'>
+              <Hexagono scale={0.5} />
+              <Hexagono scale={0.7} />
+              <Hexagono scale={0.5} />
+            </div>
+            <div className='Right'>
+              <Hexagono scale={1.5} />
+              <Hexagono />
+            </div>
+          </div>
+        </section>
+        <section className='Besties'></section>
       </main>
     </>
+  )
+}
+
+export type HexagonoType = {
+  scale?: number
+}
+export const Hexagono = ({ scale = 1 }: HexagonoType) => {
+  return (
+    <div className='Hexagono' style={{ transform: `scale(${scale})`}} />
   )
 }

@@ -1,3 +1,4 @@
+import '@/styles/bootstrap/bootstrap.css'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import './../styles/globals.scss'
