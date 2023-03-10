@@ -23,7 +23,6 @@
       }
     }
     .Right {
-      // overflow: hidden;
       position: relative;
       .Hexagono {
         position: absolute;
@@ -94,7 +93,7 @@
 
 @keyframes appear {
   0% {
-    top: -100px;
+    top: -150px;
     opacity: 0;
   }
   100% {
