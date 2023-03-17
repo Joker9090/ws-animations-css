@@ -1,0 +1,103 @@
+.Hero {
+  min-height: 200vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(30, 30, 30);
+  .Left {
+    position: relative;
+    .Hexagono {
+      position: absolute;
+    }
+    .Hexagono:nth-child(1) {
+      right: -70px;
+      margin-top: -30px;
+    }
+    .Hexagono:nth-child(2) {
+      right: -100px;
+      margin-top: 260px;
+    }
+    .Hexagono:nth-child(3) {
+      right: -240px;
+      margin-top: 90px;
+    }
+  }
+  .Right {
+    position: relative;
+    .Hexagono {
+      position: absolute;
+    }
+    .Hexagono:nth-child(1) {
+      margin-top: 90px;
+      left: -60px;
+    }
+    .Hexagono:nth-child(2) {
+      right: 104px;
+      margin-top: -120px;
+    }
+  }
+}
+
+.Hexagono {
+  animation: appear 0.6s ease forwards;
+  width: 200px;
+  height: 200px;
+  background-image: url("/spritesheet.png");
+  background-position: 0px 0px;
+  background-size: 1600px 1000px;
+  position: relative;
+  &:after {
+    animation: shown 1s infinite ease-in;
+    opacity: 0;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("/spritesheet2.png");
+    background-position: -400px 0px;
+    background-size: 3200px 600px;
+  }
+  &:before {
+    animation: animation1 2s steps(16) infinite;
+    animation-direction: alternate;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-size: 3200px 600px;
+    background-image: url("/spritesheet2.png");
+    background-position-y: 400px;
+  }
+}
+
+@keyframes shown {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    top: -150px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animation1 {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -3200px;
+  }
+}
