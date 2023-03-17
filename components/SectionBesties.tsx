@@ -9,15 +9,17 @@ export default function SectionBesties() {
 
 
   const ref = React.useRef<HTMLDivElement>(null);
-  const fixNumber = -70;
+  const fixNumber = -170;
+  const maxNumber = 160;
+
   const checkMouse = (e: Event) => {
     if (ref.current) {
       const { isIn, rectSize, globalSize } = isInViewport(ref.current)
       if (isIn) {
         setShown(true)
-        setMoved(rectSize.top * 0.5)
-        setMoved2(rectSize.top * 0.2)
-        setMoved3(rectSize.top * 0.1)
+        setMoved(((rectSize.top * -0.3) < maxNumber) ? rectSize.top * -0.3 : maxNumber)
+        setMoved2(rectSize.top * -0.15)
+        setMoved3(rectSize.top * -0.1)
       }
     }
   }
