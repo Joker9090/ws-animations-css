@@ -1,5 +1,6 @@
 @import "./sectionHero.scss";
 @import "./sectionBesties.scss";
+@import "./sectionBackground.scss";
 
 .SandBox {
   overflow: hidden;
@@ -8,23 +9,24 @@
 .SectionSeparator {
   display: flex;
   width: 100%;
-  height: 50px;
+  height: 150px;
+  z-index: 12;
   .Mini {
-    background-size: 100% 50px;
-    background-image: url("/images/lineas/solapa/lineaSolapaPatron.png");
-    height: 50px;
+    background-size: 100% 150px;
+    background-image: url("/images/lineas/solapa/lineaPatron.png");
+    height: 150px;
   }
   .Anchor {
     min-width: 500px;
-    height: 50px;
-    background-size: 500px 50px;
-    background-image: url("/images/lineas/solapa/lineaSolapaFinal.png");
+    height: 150px;
+    background-size: 500px 150px;
+    background-image: url("/images/lineas/solapa/lineaSolapa.png");
   }
   .Dynamic {
-    height: 50px;
+    height: 150px;
     width: 100%;
-    background-size: 100% 50px;
-    background-image: url("/images/lineas/solapa/lineaSolapaPatron.png");
+    background-size: 100% 150px;
+    background-image: url("/images/lineas/solapa/lineaPatron.png");
   }
   &.right {
     .Anchor {
@@ -33,18 +35,18 @@
   }
   @media screen and (max-width: 768px) {
     & {
-      height: 50px;
+      height: 150px;
       .Mini {
         display: none;
       }
       .Dynamic {
-        height: 50px;
-        background-size: 100% 50px;
+        height: 150px;
+        background-size: 100% 150px;
       }
       .Anchor {
         min-width: 500px;
-        height: 50px;
-        background-size: 500px 50px;
+        height: 150px;
+        background-size: 500px 150px;
       }
     }
   }

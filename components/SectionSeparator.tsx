@@ -2,8 +2,9 @@
 export type SectionSeparatorProps = {
   direction?: "left" | "right",
   miniSize?: number
+  style?: any
 }
-export default function SectionSeparator({ direction = "left", miniSize = 100 }: SectionSeparatorProps) {
+export default function SectionSeparator({ style = {},  direction = "left", miniSize = 100 }: SectionSeparatorProps) {
 
   const Mini = (<div key="Mini" className="Mini" style={{minWidth: miniSize}} />) 
   const Dynamic = (<div key="Dynamic" className="Dynamic" />) 
@@ -18,7 +19,7 @@ export default function SectionSeparator({ direction = "left", miniSize = 100 }:
   }
 
   return (
-    <div className={`SectionSeparator ${direction}`}>
+    <div className={`SectionSeparator ${direction}`} style={{ ...style }}>
       {buildSeparator()}
     </div>
   )

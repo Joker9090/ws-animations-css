@@ -56,7 +56,7 @@ export default function SectionBesties() {
           </div>
         </div>
       </div>
-      <SectionSeparator miniSize={200} direction="right" />
+      <SectionSeparator style={{ height: 34, position: "relative", top: -17 }} miniSize={200} direction="right" />
     </section >
   )
 }

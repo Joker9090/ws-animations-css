@@ -1,0 +1,74 @@
+.Background {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: rgb(30, 30, 30);
+  @keyframes moving {
+    0% {
+      left: -20%;
+    }
+    50% {
+      left: 0%;
+    }
+    100% {
+      left: -20%;
+    }
+  }
+  @keyframes showing {
+    0% {
+      width: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+    }
+  }
+  .Background-Logic {
+    position: absolute;
+    height: 100%;
+    left: -20%;
+    width: 120%;
+    animation: moving 80s linear infinite;
+    .Background-Pattern {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image: url("/images/hexasPattern.png");
+      background-position-x: 0px;
+      background-position-y: 100%;
+      background-size: 150%;
+      background-repeat: no-repeat;
+    }
+    .Background-Progressive-Line {
+      position: absolute;
+      height: 100%;
+      width: 0px;
+      background-color: transparent;
+      animation: showing 40s linear infinite;
+      .Background-Progressive-Child {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-image: url("/images/hexasLine.png");
+        background-position-x: 0px;
+        background-position-y: 100%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .Background-Pattern { 
+      background-position-y: 0% !important;
+    }
+    .Background-Progressive-Child {
+      background-position-y: 0% !important;
+    }
+  }
+}
+
+// hexasLine.png
+// hexasPattern.png

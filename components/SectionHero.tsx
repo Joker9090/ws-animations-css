@@ -14,7 +14,7 @@ export default function SectionHero() {
           <Hexagono />
         </div>
       </div>
-      <SectionSeparator miniSize={200} />
+      <SectionSeparator style={{height: 34}} miniSize={200} />
     </section>
   )
 }

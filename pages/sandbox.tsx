@@ -1,5 +1,6 @@
 import SectionBesties from '@/components/SectionBesties'
 import SectionHero from '@/components/SectionHero'
+import SectionBackground from '@/components/SectionBackground'
 import Head from 'next/head'
 
 export default function SandBox() {
@@ -14,7 +15,7 @@ export default function SandBox() {
       <main className='SandBox'>
         <SectionHero />
         <SectionBesties />
-        <SectionHero />
+        <SectionBackground />
       </main>
     </>
   )
