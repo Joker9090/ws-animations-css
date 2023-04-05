@@ -1,10 +1,11 @@
 .Hero {
-  min-height: 200vh;
+  min-height: 100vh;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
   background-color: rgb(30, 30, 30);
   .Left {
+    z-index: 10;
     position: relative;
     .Hexagono {
       position: absolute;
@@ -23,6 +24,7 @@
     }
   }
   .Right {
+    z-index: 10;
     position: relative;
     .Hexagono {
       position: absolute;
@@ -35,6 +37,14 @@
       right: 104px;
       margin-top: -120px;
     }
+  }
+  .content {
+    z-index: 1;
+    justify-content: center;
+  }
+  .SectionSeparator {
+    margin-top: -34px;
+    position: relative;
   }
 }
 
@@ -100,4 +110,14 @@
   to {
     background-position-x: -3200px;
   }
+}
+
+
+.RiveContainer {
+  align-items: flex-start;
+  display: flex;
+  width: 100%;
+  flex:1;
+  position: relative;
+ 
 }

@@ -12,6 +12,16 @@
     position: relative;
     margin-bottom: -13px;
     flex: 1;
+    .content {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.043);
+      display: flex;
+      flex: 1;
+      position: relative;
+      z-index: 7;
+      align-items: center;
+      justify-content: center;
+    }
     .layer-1 {
       background-image: url("/images/edificios/fondo.png");
       background-position: center;
@@ -46,7 +56,7 @@
         }
       }
       .building-1 {
-        z-index: 2;
+        z-index: 6;
         position: absolute;
         width: 300px;
         height: 600px;
@@ -57,6 +67,7 @@
         background-size: cover;
       }
       .building-2 {
+        z-index: 7;
         position: absolute;
         width: 300px;
         height: 650px;
@@ -67,6 +78,7 @@
         background-size: cover;
       }
       .building-3 {
+        z-index: 8;
         position: absolute;
         width: 300px;
         height: 600px;
@@ -80,7 +92,6 @@
   }
 }
 
-
 @keyframes appearBuilding {
   0% {
     top: 60;
@@ -89,5 +100,26 @@
   100% {
     top: 0px;
     opacity: 1;
+  }
+}
+
+.LoadingBar {
+  border-radius: 30px;
+  border: 2px solid white;
+  width: 300px;
+  margin-top: 0px;
+  overflow: hidden;
+  height: 50px;
+  .Bar {
+    transition: all 0.2s ease;
+    background-color: red;
+    width: 60%;
+    height: 50px;
+  }
+  &.isCompleted {
+    .Bar {
+      transition: all 0.2s ease;
+      background-color: green;
+    }
   }
 }

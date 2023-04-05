@@ -2,3 +2,13 @@
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 @import "./sandbox.scss";
+
+.p-absolute  {position: absolute;}
+.overflow-hidden { overflow: hidden; }
+
+
+@for $i from 1 through 10 {
+  .flex-#{$i} {
+    flex: $i;
+  }
+}
